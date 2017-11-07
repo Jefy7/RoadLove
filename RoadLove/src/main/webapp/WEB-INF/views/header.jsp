@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+	<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,7 +17,7 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   <link href="resources/css/bootstrap.min.css" rel="stylesheet">
 
-    <style type="text/css">
+    <style type="text/css"> 
         body {
          background: url(assets/bglight.png); 
          }
@@ -23,11 +25,15 @@
         background-color: #fff; 
         }
         .center { display: block; margin: 0 auto; }
+        
+        .nav .navbar-nav .white{
+        	color:white;
+        }
     </style>
-
-
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -42,17 +48,38 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand text-uppercase" href="index">RoadLove <span class="label label-success text-capitalize">Bikez</span></a>
+       
+     
+  <ul class="nav navbar-nav white">
+  	 <c:if test="${sessionScope.name!=null }">
+  		<li><a><span class="glyphicon glyphicon-user"></span><c:out value=" ${sessionScope.name}"> </c:out> </a></li>
+  		</c:if>
+  </ul>
         </div>
     
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navigation">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="aboutus">About</a></li>
-                <li><a href="home">Home</a></li>
+               <li><a href="aboutus">About</a></li>
+               <li><a href="home">Home</a></li>
                <li><a href="contact">Contact us</a></li>
+               
+             <li><a href="category">Products</a></li>
+      <li>
+            <c:if test="${sessionScope.admin }">
                <li><a href="addproduct">Add product</a></li>
-                <li><a href="addcategory">Add Category</a></li>
-                <li><a href="login"> <button  type="button" class="btn btn-success navbar-btn btn-circle">Log in</button></a></li>
+               <li><a href="addsupplier">Add supplier</a></li>
+               <li><a href="addcategory">Add Category</a></li>         
+               </c:if>
+            <c:if test="${sessionScope.name==null }"> 
+              <li><a href="signup"><span class="glyphicon glyphicon-user"></span></a></li>
+               </c:if>
+            <c:if test="${sessionScope.name!=null }">
+             <li><a href="mycart">
+          <span class="glyphicon glyphicon-shopping-cart"></span>
+        </a></li>
+               <li><a href="logout"><span class="glyphicon glyphicon-off"></span></a></li>
+               </c:if>
             </ul>
         </div>
       </div>

@@ -45,12 +45,14 @@
             <div >
              <div class="footer text-center" >
                  
-                  <button type="submit">Get started</button>
-               
+                  <button type="submit" class="btn btn-success">Get started</button>
+                  </form:form>
+               <a href="login"><button class="btn btn-default" value="Login">Login</button></a>
                 </div>
             </div>
               </div>
-            </form:form>
+            
+            
           </div>
         </div>
       </div>

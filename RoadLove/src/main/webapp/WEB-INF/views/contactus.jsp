@@ -4,12 +4,22 @@
 <html>
 <head>
 <%@ include file = "header.jsp" %>
+<link href="resources/css/lol.css" rel="stylesheet">
 <meta http-equiv="Content-Type"content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
-<h1>Thanks for contacting us!!!!!!!!<a href="index">!!!!!!</a></h1>
-<img src="resources/image/123.jpg"alt="hi">
+<body class="lol">
+<div class="gaana">
+<div class="container">
+<h1>RoadLove.pvt.ltd</h1>
+<p>
+48/3, Effile Tower,<br>
+Kuruku Sandhu,<br>
+Parris,<br>
+France.<br>
+ph: 9876543210<br>
+Email: mail2jefrin@gmail.com
+</div></div>
 <%@ include file = "footer.jsp" %>
 </body>
 </html>	

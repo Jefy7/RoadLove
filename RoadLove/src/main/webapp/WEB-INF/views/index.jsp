@@ -20,7 +20,7 @@
     <div class="carousel-inner">
 
       <div class="item active">
-        <img src="resources/image/bike1.jpg" alt="Los Angeles" style="width:100%;">
+        <img src="resources/image/ducati.jpg" alt="Los Angeles" style="width:cover;">
         <div class="carousel-caption">
           
         </div>
@@ -34,7 +34,7 @@
       </div>
     
       <div class="item">
-        <img src="resources/image/biker3.jpg" alt="New York" style="width:100%;">
+        <img src="resources/image/R1.jpg" alt="New York" style="width:100%;">
         <div class="carousel-caption">
           
         </div>

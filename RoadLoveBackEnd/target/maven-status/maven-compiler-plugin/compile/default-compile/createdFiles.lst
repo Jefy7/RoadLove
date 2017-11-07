@@ -1,5 +1,15 @@
 com\rl\roadlovebackend\dao\UserDao.class
-com\rl\roadlovebackend\daoimpl\UserDaoImpl.class
+com\rl\roadlovebackend\model\SupplierModel.class
+com\rl\roadlovebackend\dao\CategoryDao.class
 com\rl\roadlovebackend\model\UserCredentials.class
+com\rl\roadlovebackend\model\ProductModel.class
+com\rl\roadlovebackend\daoimpl\CategoryDaoImpl.class
+com\rl\roadlovebackend\model\CartModel.class
+com\rl\roadlovebackend\daoimpl\SupplierDaoImpl.class
+com\rl\roadlovebackend\daoimpl\UserDaoImpl.class
+com\rl\roadlovebackend\model\CategoryModel.class
 com\rl\roadlovebackend\App.class
 com\rl\roadlovebackend\DataBaseConfiguration.class
+com\rl\roadlovebackend\dao\SupplierDao.class
+com\rl\roadlovebackend\dao\ProductDao.class
+com\rl\roadlovebackend\daoimpl\ProductDaoImpl.class

@@ -10,6 +10,15 @@ public class UserCredentials {
 	private String email;
 	@Column
 	private String name,password;
+	private String role = "user";
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
 
 	public String getName() {
 		return name;

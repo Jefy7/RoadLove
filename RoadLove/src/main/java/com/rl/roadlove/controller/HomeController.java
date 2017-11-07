@@ -1,14 +1,21 @@
 package com.rl.roadlove.controller;
 
+import java.util.List;
+import javax.servlet.http.HttpSession;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-
 import org.springframework.web.bind.annotation.RequestMapping;
+import com.rl.roadlovebackend.dao.CategoryDao;
+import com.rl.roadlovebackend.model.CategoryModel;
 
 @Controller
 public class HomeController {
 	
+	@Autowired
+	CategoryDao categoryDao;
+	
 	@RequestMapping(value={"index","/"})
-	public String showMeIndex()
+	public String showMeIndex(HttpSession session)
 	{
 		return "index";
 	}
@@ -35,10 +42,7 @@ public class HomeController {
 		return "login";
 	}
 	
-	@RequestMapping("addproduct")
-	public String showMeAddProduct(){
-		return "addproduct";
-	}
+	
 	
 	
 }

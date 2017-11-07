@@ -40,15 +40,15 @@
                 <div class="col-md-5 col-md-offset-1">
                     <div class="content">
                         <div class="pull-middle">
-                            <h2 class="h1 page-header">Discover more about features.</h2>
+                            <h2 class="h1 page-header">Know about us.</h2>
                             <ul class="media-list">
                               <li class="media">
                                 <a class="media-left" href="#">
                                   <span class="glyphicon glyphicon-cloud icon text-success"></span>
                                 </a>
                                 <div class="media-body">
-                                  <h3 class="media-heading">Praesent porttitor urna ut enim.</h3>
-                                  <p>Maecenas vitae ex iaculis, efficitur est eu, fermentum quam.</p>
+                                  <h3 class="media-heading">Why RoadLove</h3>
+                                  <p>We are a team who believe that the customer is king and strive to make sure you are treated like a king.</p>
                                 </div>
                               </li>
                               <li class="media">
@@ -56,19 +56,10 @@
                                   <span class="glyphicon glyphicon-lock icon text-success"></span>
                                 </a>
                                 <div class="media-body">
-                                  <h3 class="media-heading">Cras consequat est et elit.</h3>
-                                  <p>Integer suscipit massa at tellus semper, at aliquam ante bibendum.</p>
+                                  <h3 class="media-heading">Our Strength.</h3>
+                                  <p>We believe that together we can make your experience one that you never forget. </p>
                                 </div>
-                              </li>
-                              <li class="media">
-                                <a class="media-left" href="#">
-                                  <span class="glyphicon glyphicon-user icon text-success"></span>
-                                </a>
-                                <div class="media-body">
-                                  <h3 class="media-heading">Aenean vel enim quis dui blandit.</h3>
-                                  <p>Maecenas vitae ex iaculis, efficitur est eu, fermentum quam.</p>
-                                </div>
-                              </li>
+                             
                             </ul>
                         </div>
                     </div>
@@ -83,8 +74,8 @@
                     <div class="content">
                         <div class="pull-middle">
                             <h4><strong>Describe your product.</strong></h4>
-                            <p>Proin sapien neque, consequat ac tempus aliquam, gravida in urna. Phasellus et lectus in odio imperdiet tempus. Aenean posuere, nunc a tristique imperdiet, massa dolor dictum eros, sit amet tempor turpis turpis vel tortor.</p>
-                            <small>Phasellus feugiat at lorem a tincidunt. Nam hendrerit leo vitae orci pellentesque, nec euismod dolor condimentum.</small>
+                            <p>We pride ourselves on giving you everything that you need to make a decision while buying a bike.</p>
+                            <small> We bring together the best from the world of bikes</small>
                         </div>
                     </div>
                 </div>
@@ -97,7 +88,7 @@
                     <div class="content">
                         <div class="pull-middle">
                             <h4><strong>Even more stuff.</strong></h4>
-                            <p>Proin sapien neque, consequat ac tempus aliquam, gravida in urna. Phasellus et lectus in odio imperdiet tempus. Aenean posuere, nunc a tristique imperdiet, massa dolor dictum eros, sit amet tempor turpis turpis vel tortor.</p>
+                            <p>on our site, you can also calculate your EMI(easy monthly instalment) options, find tyres for your bike and also write your own personal review of a bike.</p>
                             <a class="btn btn-success btn-circle" href="#">Sign up for free</a>
                         </div>
                     </div>

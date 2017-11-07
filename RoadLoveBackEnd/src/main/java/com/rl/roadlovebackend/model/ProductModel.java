@@ -1,22 +1,30 @@
 package com.rl.roadlovebackend.model;
 
 import javax.persistence.*;
+import org.springframework.web.multipart.MultipartFile;
 
 
 @Entity
-public class ProductModel {
-	@Id
-	private String productID;
+public class ProductModel{
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int productID;
+	@Transient
+	private MultipartFile productImage;
 	private String productName, description,productSupplier,manufacturer, productCategory;
-	
 	private int quantity;
 	private double prize;
 
 	
-	public String getProductID() {
+	public MultipartFile getProductImage() {
+		return productImage;
+	}
+	public void setProductImage(MultipartFile productImage) {
+		this.productImage = productImage;
+	}
+	public int getProductID() {
 		return productID;
 	}
-	public void setProductID(String productID) {
+	public void setProductID(int productID) {
 		this.productID = productID;
 	}
 	public String getProductName() {
@@ -42,6 +50,12 @@ public class ProductModel {
 	}
 	public void setManufacturer(String manufacturer) {
 		this.manufacturer = manufacturer;
+	}
+	public String getProductCategory() {
+		return productCategory;
+	}
+	public void setProductCategory(String productCategory) {
+		this.productCategory = productCategory;
 	}
 	public int getQuantity() {
 		return quantity;

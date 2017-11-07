@@ -1,2 +1,6 @@
 com\rl\roadlove\controller\UserController.class
+com\rl\roadlove\controller\CategoryController.class
+com\rl\roadlove\controller\ProductController.class
+com\rl\roadlove\controller\LoginController.class
 com\rl\roadlove\controller\HomeController.class
+com\rl\roadlove\controller\SupplierController.class

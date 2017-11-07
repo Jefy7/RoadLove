@@ -9,4 +9,13 @@ public interface CategoryDao {
 	public	boolean insertCategory(CategoryModel categorymodel);
 	
 	public List<CategoryModel> allCategory();
+	
+	public boolean deleteCategory(int categoryId);
+	
+	public CategoryModel displayCategoryEdit(int categoryID);
+	
+	public boolean updateCategory(CategoryModel categorymodel);
+	
+	
+	
 }

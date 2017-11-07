@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <%@ include file = "header.jsp" %>
+	<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+    <title>RoadLove</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <style type="text/css">
+    .glyphicon { margin-right:5px; }
+.thumbnail
+{
+    margin-bottom: 20px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.item.list-group-item
+{
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
+{
+    background: #428bca;
+}
+
+.item.list-group-item .list-group-image
+{
+    margin-right: 10px;
+}
+.item.list-group-item .thumbnail
+{
+    margin-bottom: 0px;
+}
+.item.list-group-item .caption
+{
+    padding: 9px 9px 0px 9px;
+}
+.item.list-group-item:nth-of-type(odd)
+{
+    background: #eeeeee;
+}
+
+.item.list-group-item:before, .item.list-group-item:after
+{
+    display: table;
+    content: " ";
+}
+
+.item.list-group-item img
+{
+    float: left;
+}
+.item.list-group-item:after
+{
+    clear: both;
+}
+.list-group-item-text
+{
+    margin: 0 0 11px;
+}
+
+    </style>
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        window.alert = function(){};
+        var defaultCSS = document.getElementById('bootstrap-css');
+        function changeCSS(css){
+            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
+            else $('head > link').filter(':first').replaceWith(defaultCSS); 
+        }
+        $( document ).ready(function() {
+          var iframe_height = parseInt($('html').height()); 
+          window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
+        });
+    </script>
+</head>
+<body>
+
+
+	<div class="container" style="margin-top:40pt;">
+    <div class="well well-sm">
+        <strong>Category Title</strong>
+        <div class="btn-group">
+            <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
+            </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
+                class="glyphicon glyphicon-th"></span>Grid</a>
+        </div>
+    </div>
+    <div id="products" class="row list-group">
+    
+    
+    <c:forEach items="${catproducts}" var="prolist">
+    
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image img-thumbnail"  src="resources/productimages/${prolist.getProductID()}.jpg" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">${prolist.getProductName()} </h4>
+                    <p class="group inner list-group-item-text">
+                     ${prolist.getDescription()}   .</p>
+                     <p class="group inner list-group-item-text">
+                Brand:    <strong>  ${prolist.getManufacturer()} </strong>  .</p>
+                     <p class="group inner list-group-item-text">
+                Supplier:  <strong>   ${prolist.getProductSupplier()} </strong>  .</p>
+                     
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                              Rs: ${prolist.getPrize()} </p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="addtocart?id=${prolist.getProductID()}">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        </c:forEach>
+    </div>
+</div>
+
+	<script type="text/javascript">
+	$(document).ready(function() {
+    $('#list').click(function(event){event.preventDefault();$('#products .item').addClass('list-group-item');});
+    $('#grid').click(function(event){event.preventDefault();$('#products .item').removeClass('list-group-item');$('#products .item').addClass('grid-group-item');});
+});
+	</script>
+	<%@ include file = "footer.jsp" %>
+</body>
+</html>
